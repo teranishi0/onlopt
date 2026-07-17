@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onlopt"
+version = "0.1.0"
+description = "オンライン最適化研究用モジュール(BOBW・リグレット最小化・OLO)"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+scipy = ["scipy>=1.11"]
+dev = ["pytest>=8", "pytest-cov", "mypy>=1.8", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+include = ["onlopt*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: 時間のかかるレジーム挙動テスト(-m 'not slow' で除外可)",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true

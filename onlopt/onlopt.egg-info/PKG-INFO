@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: onlopt
+Version: 0.1.0
+Summary: オンライン最適化研究用モジュール(BOBW・リグレット最小化・OLO)
+Requires-Python: >=3.11
+Requires-Dist: numpy>=1.26
+Requires-Dist: matplotlib>=3.8
+Provides-Extra: scipy
+Requires-Dist: scipy>=1.11; extra == "scipy"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: mypy>=1.8; extra == "dev"
+Requires-Dist: ruff>=0.4; extra == "dev"

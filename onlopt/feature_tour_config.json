@@ -1,0 +1,26 @@
+{
+  "name": "tsallis_stochastic_gap03",
+  "T": 5000,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "learner": {
+    "class": "TsallisINF",
+    "n_actions": 4,
+    "c": 2.0
+  },
+  "environment": {
+    "class": "StochasticEnv",
+    "gap": 0.3
+  },
+  "aggregation": "bootstrap",
+  "confidence": 0.95,
+  "notes": "feature tour のデモ設定"
+}

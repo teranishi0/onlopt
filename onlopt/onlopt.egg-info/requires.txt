@@ -1,0 +1,11 @@
+numpy>=1.26
+matplotlib>=3.8
+
+[dev]
+pytest>=8
+pytest-cov
+mypy>=1.8
+ruff>=0.4
+
+[scipy]
+scipy>=1.11
